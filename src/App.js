@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoadingBar from 'react-top-loading-bar';
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [progress, setProgress] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <LoadingBar
+        color='red'
+        progress={progress}
+        height={5}
+        onLoaderFinished={() => setProgress(0)}
+      />
+      <Navbar />
+      <Routes>
+      <Route exact path="/" element={<Home category="General" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/home" element={<Home category="General" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/general" element={<Home category="General" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/business" element={<Home category="Business" pageSize="20"setProgress={setProgress}/>} />
+        <Route exact path="/entertainment" element={<Home category="Entertainment" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/health" element={<Home category="Health" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/sports" element={<Home category="Sports" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/science" element={<Home category="Science" pageSize="20" setProgress={setProgress}/>} />
+        <Route exact path="/technology" element={<Home category="Technology" pageSize="20" setProgress={setProgress}/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

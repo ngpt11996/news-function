@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+span {
+  /* display: flex; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* justify-content: flex-start; */
+}
+
+/* Most of the time, absolutely positioned elements have auto values of height and width computed to fit
+ the contents of the element. However, non-replaced absolutely positioned elements can be made to
+  fill the available space by specifying (as other than auto) both top and bottom and leaving height 
+  unspecified (that is, auto). Likewise for left, right, and width. */
