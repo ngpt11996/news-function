@@ -18,15 +18,15 @@ const App = () => {
       />
       <Navbar />
       <Routes>
-      <Route exact path="/" element={<Home category="General" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/home" element={<Home category="General" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/general" element={<Home category="General" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/business" element={<Home category="Business" pageSize="20"setProgress={setProgress}/>} />
-        <Route exact path="/entertainment" element={<Home category="Entertainment" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/health" element={<Home category="Health" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/sports" element={<Home category="Sports" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/science" element={<Home category="Science" pageSize="20" setProgress={setProgress}/>} />
-        <Route exact path="/technology" element={<Home category="Technology" pageSize="20" setProgress={setProgress}/>} />
+      <Route exact path="/" element={<Home category="General" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/home" element={<Home category="General" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/general" element={<Home category="General" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/business" element={<Home category="Business" pageSize="21"setProgress={setProgress}/>} />
+        <Route exact path="/entertainment" element={<Home category="Entertainment" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/health" element={<Home category="Health" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/sports" element={<Home category="Sports" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/science" element={<Home category="Science" pageSize="21" setProgress={setProgress}/>} />
+        <Route exact path="/technology" element={<Home category="Technology" pageSize="21" setProgress={setProgress}/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -64,7 +64,9 @@ const News = (props) => {
     const [totalResults, setTotalResults] = useState(0);
     const [articles, setArticles] = useState([]);
 
+    //http://api.mediastack.com/v1/news?access_key=50a05d099599bc543ca6b21eda2bd073&categories=${props.category}&keywords=tennis&countries=in&offset=${page}&limit=${props.pageSize}
     async function getData(page) {
+       // let url = `http://api.mediastack.com/v1/news?access_key=50a05d099599bc543ca6b21eda2bd073&categories=${props.category}&keywords=tennis&countries=in&offset=${page}&limit=${props.pageSize}`;
         let url = `https://newsapi.org/v2/top-headlines?category=${props.category}&apiKey=f821e288ff394ab9b46f36b463899554&country=in&page=${page}&pageSize=${props.pageSize}`;
         console.log(url);
         setLoading(true);
